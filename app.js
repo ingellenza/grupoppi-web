@@ -229,7 +229,8 @@ checkoutBtn.addEventListener('click', async () => {
 
     } catch (error) {
         console.error('Checkout error:', error);
-        alert('Hubo un error al procesar el pago. Asegúrate de que el backend esté corriendo.');
+        // Mostrar el mensaje real del error para facilitar depuración
+        alert(`Error: ${error.message || 'Hubo un error al procesar el pago.'}`);
     } finally {
         checkoutBtn.innerText = 'Finalizar Compra';
         checkoutBtn.disabled = false;
